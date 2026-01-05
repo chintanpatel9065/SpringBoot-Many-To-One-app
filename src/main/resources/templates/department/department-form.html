@@ -33,6 +33,7 @@
                     </div>
                     <div class="card-body">
                         <form th:action="@{/departments/insertOrUpdateDepartment}" th:object="${department}" method="post">
+                          <input type="hidden" th:field="*{departmentId}" />
                             <div class="mb-3">
                                 <label class="form-label">Department Name</label>
                                 <input type="text" th:field="*{departmentName}" class="form-control" th:classappend="${#fields.hasErrors('departmentName')} ? 'is-invalid' : ''">
